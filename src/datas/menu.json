@@ -1,0 +1,21 @@
+[
+    {
+        "name":"accueil",
+        "iconPath":"home.svg"
+    },
+    {
+        "name": "nature",
+        "iconPath": "mountain.svg",
+        "labelOfPage": "Photos de <span style='color: rgba(17, 157, 164)'>nature</span>"
+    },
+    {
+        "name": "portrait",
+        "iconPath": "face.svg",
+        "labelOfPage": "Photos de <span style='color: rgba(17, 157, 164)'>portrait</span>"
+    },
+    {
+        "name": "artistique",
+        "iconPath": "brush.svg",
+        "labelOfPage": "Photos <span style='color: rgba(17, 157, 164)'>artistiques</span>"
+    }
+]

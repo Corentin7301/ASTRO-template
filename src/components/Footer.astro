@@ -1,0 +1,29 @@
+---
+import informationsDatas from "../datas/informationDatas.json"
+import Contact from "../components/Contact.vue"
+import Copyright from "../components/Copyright.astro"
+import pages from '../datas/pages.json'
+---
+
+<div class="  flex justify-between items-center px-5 lg:px-20">
+    <ul class=" space-y-2">
+        {pages.map((item)=>{
+        return <li>
+            <a href={item.url}
+                class="hover:opacity-75 transition-all block text-lg capitalize text-white focus:outline-white">{item.name}</a></li>
+        })
+        }
+    </ul>
+    <div>
+        <a href={informationsDatas.instaUrl} target="_blank" class="focus:outline-white"><img src={Astro.resolve('/assets/instagram-icon.svg')}
+                alt="instagram" class=" w-12 h-12 text-lightColor mt-[10px] mb-3 hover:opacity-75 transition-all"></a>
+        <Contact client:visible />
+    </div>
+</div>
+<div class=" mt-5 px-5 lg:px-20">
+    <a href="/" class="focus:outline-white">
+        <img src={`https://res.cloudinary.com/sarah3902/image/upload/q_auto/fl_lossy/ar_5:3,c_fill,g_face${informationsDatas.logo_white}`}
+            alt="Sarah LEROY" class=" w-40 lg:w-56 lg:mt-10 rounded-md transition-all hover:opacity-75">
+    </a>
+    <Copyright client:visible />
+</div>

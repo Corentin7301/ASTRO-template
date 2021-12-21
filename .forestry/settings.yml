@@ -1,0 +1,39 @@
+---
+new_page_extension: md
+auto_deploy: false
+admin_path: "/admin"
+webhook_url: 
+sections:
+- type: heading
+  label: Photos
+- type: directory
+  path: src/pagesDatas
+  label: Photos
+  create: all
+  match: "**/*"
+  new_doc_ext: json
+- type: heading
+  label: Metas
+- type: document
+  path: src/datas/defaultMetas.json
+  label: Metas par défaut
+- type: heading
+  label: Informations
+- type: document
+  path: src/datas/informationDatas.json
+  label: Informations
+- type: document
+  path: src/pagesDatas/mentionsLegales.md
+  label: Mentions légales
+upload_dir: sarahleroy.fr
+public_path: "/sarahleroy.fr"
+front_matter_path: ''
+use_front_matter_path: true
+file_template: ":filename:"
+build:
+  preview_output_directory: dist
+  install_dependencies_command: npm install
+  preview_docker_image: forestryio/node:12
+  mount_path: "/srv"
+  working_dir: "/srv"
+  instant_preview_command: npm run dev

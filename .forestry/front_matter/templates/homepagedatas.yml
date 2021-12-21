@@ -1,0 +1,53 @@
+---
+label: homePageDatas
+hide_body: true
+fields:
+- name: mainImage
+  type: file
+  config:
+    maxSize: 5
+  label: mainImage
+- name: description
+  type: textarea
+  default: ''
+  config:
+    required: true
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: Description
+- type: field_group_list
+  name: photos
+  label: photos
+  fields:
+  - type: text
+    name: title
+    label: title
+  - name: photo
+    type: file
+    config:
+      maxSize: 5
+    label: photo
+- type: field_group
+  name: metas
+  label: metas
+  fields:
+  - type: text
+    name: title
+    label: title
+  - type: text
+    name: description
+    label: description
+  - name: imagelink
+    type: file
+    config:
+      maxSize: 5
+    label: imageLink
+  - type: text
+    name: twitterTitle
+    label: twitterTitle
+  - type: text
+    name: twitterDescription
+    label: twitterDescription
+pages:
+- src/pagesDatas/accueil.json

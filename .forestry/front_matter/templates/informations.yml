@@ -1,0 +1,32 @@
+---
+label: Informations
+hide_body: true
+fields:
+- type: text
+  name: instaUrl
+  label: Url compte Instagram
+- type: field_group
+  name: phone
+  label: Numéro de téléphone
+  fields:
+  - type: text
+    name: phoneLabel
+    label: Numéro de téléphone (label)
+  - type: text
+    name: phoneUrl
+    label: Numéro de téléphone (url)
+- type: text
+  name: email
+  label: Adresse email
+- name: logo_black
+  type: file
+  config:
+    maxSize: 64
+  label: Logo version noire
+- name: logo_white
+  type: file
+  config:
+    maxSize: 10
+  label: Logo version blanche
+pages:
+- src/datas/informationDatas.json

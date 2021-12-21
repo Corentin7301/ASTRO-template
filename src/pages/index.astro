@@ -1,0 +1,74 @@
+---
+import HomeLayout from '../layouts/homeLayout.astro';
+import homeDatas from '../pagesDatas/accueil.json'
+import menu from '../datas/menu.json'
+---
+
+<HomeLayout client:visible menu={menu} title={homeDatas.metas.title} description={homeDatas.metas.description}
+    imageLink={homeDatas.metas.imageLink} twitterTitle={homeDatas.metas.twitterTitle}
+    twitterDescription={homeDatas.metas.twitterDescription}>
+
+    <img src={`https://res.cloudinary.com/sarah3902/image/upload/q_auto/f_auto/fl_lossy${homeDatas.photos[1].photo}`}
+        alt="Sarah Leroy" class=" logo hidden" />
+    <div class="masonry-grid ">
+        {homeDatas.photos.map((photo)=>{
+        return <a data-fslightbox
+            href={`https://res.cloudinary.com/sarah3902/image/upload/q_auto/f_auto/fl_lossy${photo.photo}`}
+            class="widthOfPhoto w-[47%] shadow-xl focus:outline-black">
+            <img src={`https://res.cloudinary.com/sarah3902/image/upload/q_auto/f_auto/fl_lossy${photo.photo}`}
+                alt={photo.title} class=" rounded-md" />
+        </a>
+        })}
+    </div>
+</HomeLayout>
+
+
+<script src="https://unpkg.com/magic-grid/dist/magic-grid.min.js"></script>
+<script src={Astro.resolve("/js/fslightbox.js")}></script>
+
+<script>
+    let masonryGrid = new MagicGrid({
+        container: ".masonry-grid", // Required. Can be a class, id, or an HTMLElement.
+        static: true, // Required for static content.
+        gutter: 10, //Space between items. Default: 25(px).
+        useMin: true, // Prioritize shorter columns when positioning items? Default: false.
+    });
+
+    masonryGrid.listen();
+</script>
+
+<style>
+    .widthOfPhoto:nth-child(2) {
+        --tw-shadow: none;
+        box-shadow: none;
+        padding: 5px 5px 0 5px;
+    }
+
+
+    @media (max-width: 373px) {
+        .widthOfPhoto {
+            width: 100%;
+        }
+
+        .widthOfPhoto:nth-child(2) {
+            display: none;
+        }
+
+        .logo {
+            display: block;
+            width: 80%;
+            margin: auto;
+            margin-bottom: 20px;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .widthOfPhoto {
+            width: 32%;
+        }
+
+        .widthOfPhoto:nth-child(2) {
+            display: none;
+        }
+    }
+</style>

@@ -1,0 +1,22 @@
+---
+const {menu} = Astro.props;
+import informationsDatas from "../datas/informationDatas.json";
+const {slug} = Astro.request.params
+---
+
+<div class="flex items-start justify-between lg:justify-center relative lg:w-full ">
+  <div class="max-w-[80%] lg:max-w-full flex flex-col items-center justify-center gap-2 lg:gap-10">
+    <a href="/" class=" hover:opacity-75 focus:outline-black">
+      <img src={`https://res.cloudinary.com/sarah3902/image/upload/q_auto/f_auto/fl_lossy${informationsDatas.logo_black}`}
+        alt="Sarah Leroy photo" class=" hidden lg:block w-full transition-all">
+    </a>
+
+    {menu.map((item)=>{
+    if(item.name === slug) {
+    return <a href="/" class=" lg:focus:outline-none lg:cursor-default"><img src={`/assets/${item.iconPath}`}
+        alt="Sarah LEROY" class=" w-full lg:max-w-[150px] rounded-md transition-all"></a>
+    }
+    })}
+    <p class=" lg:hidden text-center text-darkColor capitalize text-lg">{slug}</p>
+  </div>
+</div>

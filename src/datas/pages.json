@@ -1,0 +1,22 @@
+[
+    {
+        "name":"accueil",
+        "url":"/"
+    },
+    {
+        "name":"nature",
+        "url":"/photos/nature"
+    },
+    {
+        "name":"portrait",
+        "url":"/photos/portrait"
+    },
+    {
+        "name":"artistique",
+        "url":"/photos/artistique"
+    },
+    {
+        "name":"Mentions légales",
+        "url":"/mentions-legales"
+    }
+]
