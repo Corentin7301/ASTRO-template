@@ -5,9 +5,9 @@ module.exports = {
     theme: {
         extend: {
             colors: {
-                persoBlue: '#119DA4',
-                lightColor: '#F9F7F3',
-                darkColor: '#063537'
+                persoMainColor: '#f35d07',
+                lightColor: '#e2e5e9',
+                darkColor: '#1f2937'
             },
             fontFamily: {
                 'montserrat': ['Montserrat', 'sans-serif'],

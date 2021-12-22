@@ -1,0 +1,17 @@
+---
+const {menu} = Astro.props;
+import Menu from "../components/Menu.astro";
+---
+
+<header class=" mb-24">
+    <div class=" pt-9 lg:p-0 space-y-14">
+        <h1 class=" font-black text-5xl text-center">ASTRO template</h1>
+    <Menu menu={menu} client:visible/>
+    </div>
+</header>
+
+<!-- add rellax -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.6.2/rellax.min.js"></script>
+<script>
+var rellax = new Rellax('.rellax');
+</script> -->

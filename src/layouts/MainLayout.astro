@@ -1,7 +1,7 @@
 ---
 let {menu,title,description,imageLink,twitterTitle,twitterDescription} = Astro.props;
 import defaultMetas from "../datas/defaultMetas.json";
-import HomeHeader from "../components/HomeHeader.astro";
+import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 
 ---
@@ -36,21 +36,21 @@ import Footer from "../components/Footer.astro";
 
     <title>{title}</title>
     <link rel="icon"
-        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📷</text></svg>" />
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>" />
     <link rel="stylesheet" href={Astro.resolve('../styles/global.css')}> <link rel="preconnect"
         href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap" rel="stylesheet"> <!-- FONT link -->
 </head>
 
-<body class="bg-lightColor font-montserrat">
-    <main class=" max-w-7xl m-auto px-5 lg:py-16 lg:px-0">
-        <HomeHeader client:visible menu={menu} />
+<body class="bg-darkColor text-lightColor font-montserrat">
+    <main class=" max-w-5xl m-auto px-5 lg:py-16 lg:px-0">
+        <Header client:visible menu={menu} />
 
         <slot />
 
     </main>
-    <footer class="bg-persoBlue rounded-t-md pt-9 pb-2 mt-5">
+    <footer class="bg-persoMainColor rounded-t-md pt-9 pb-2 mt-5">
         <!-- COMPONENT -->
         <Footer client:visible />
     </footer>

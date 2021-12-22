@@ -1,0 +1,19 @@
+---
+const {menu} = Astro.props
+
+---
+<!-- desktop -->
+<div>
+    <p class=" text-lightColor mb-3 text-2xl font-bold">Menu</p>
+    <div class="categories-menu flex items-center space-x-7 capitalize">
+        {menu.map((item)=>{
+        if(item.name != "accueil") {
+        return <a href={`/photos/${item.slug}`}
+            class="hover:transform hover:-translate-y-1 transition-all focus:outline-white"> <p>{item.name}</p></a>
+        } else {
+            return <a href={`${item.slug}`}
+            class="hover:transform hover:-translate-y-1 transition-all focus:outline-white"> <p>{item.name}</p></a>
+        }
+        })}
+    </div>
+</div>

@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: http://www.sarahleroy.fr/sitemap.xml
+Sitemap: http://www.sitename.fr/sitemap.xml

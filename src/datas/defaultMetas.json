@@ -1,10 +1,10 @@
 {
-    "defaultDescription": "Sarah Leroy, photographe nature, de portrait et artistique",
-    "defaultTitle": "Sarah Leroy",
-    "defaultUrl":"https://sarahleroy.fr",
-    "defaultImageLink":"",
-    "defaultTwitter":"@LEROYSa42416505",
-    "defaultTwitterUrl":"https://twitter.com/LEROYSa42416505",
-    "defaultTwitterTitle":"Sarah Leroy",
-    "defaultTwitterDescription":"Sarah Leroy, photographe nature, de portrait et artistique"
+    "defaultTitle": "Title du site",
+    "defaultDescription": "Description du site",
+    "defaultUrl":"https://sitename.fr",
+    "defaultImageLink":"Lien de l'image des social cards",
+    "defaultTwitter":"@twitterName",
+    "defaultTwitterUrl":"https://twitter.com/twitterName",
+    "defaultTwitterTitle":"Title du site pour la card Twitter",
+    "defaultTwitterDescription":"Description du site pour la card Twitter"
 }

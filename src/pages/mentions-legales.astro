@@ -1,6 +1,5 @@
 ---
 import OtherLayout from '../layouts/otherLayout.astro';
-import informationsDatas from "../datas/informationDatas.json"
 import { Markdown } from 'astro/components';
 const mentionsDatas = Astro.fetchContent('../pagesDatas/mentionsLegales.md')
 
@@ -8,8 +7,8 @@ const mentionsDatas = Astro.fetchContent('../pagesDatas/mentionsLegales.md')
 
 <OtherLayout client:visible title="Mentions légales">
     <a href="/" class="header-mentions focus:outline-white">
-        <img src={`https://res.cloudinary.com/sarah3902/image/upload/q_auto/fl_lossy/ar_5:3,c_fill,g_face${informationsDatas.logo_black}`}
-            alt="Sarah LEROY" class=" w-40 lg:w-56 lg:mt-10 rounded-md transition-all hover:opacity-75">
+        <img src={Astro.resolve("/assets/astro-logo.jpg")}
+            alt="logo" class=" w-40 lg:w-56 lg:mt-10 rounded-md transition-all hover:opacity-75">
     </a>
 
     <div class=" markdown-style my-16">
@@ -19,29 +18,29 @@ const mentionsDatas = Astro.fetchContent('../pagesDatas/mentionsLegales.md')
 
 <style lang="scss">
     .markdown-style {
-        @apply text-darkColor;
+        @apply text-lightColor;
         h1 {
             @apply text-4xl font-bold mb-7;
         }
 
         h2 {
-            @apply text-2xl font-bold mb-4 mt-10 text-persoBlue;
+            @apply text-2xl font-bold mb-4 mt-10 text-persoMainColor;
         }
 
         h3 {
-            @apply text-xl mb-4 mt-10 font-bold text-persoBlue;
+            @apply text-xl mb-4 mt-10 font-bold text-persoMainColor;
         }
 
         h4 {
-            @apply text-lg mb-3 mt-10 text-persoBlue;
+            @apply text-lg mb-3 mt-10 text-persoMainColor;
         }
 
         a {
-            @apply text-persoBlue;
+            @apply text-persoMainColor;
         }
 
         strong {
-            @apply font-bold text-persoBlue;
+            @apply font-bold text-persoMainColor;
         }
     }
 </style>

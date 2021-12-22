@@ -42,11 +42,11 @@ import Footer from "../components/Footer.astro";
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap" rel="stylesheet">
 </head>
 
-<body class="bg-lightColor font-montserrat">
+<body class="bg-darkColor text-lightColor font-montserrat">
     <main class=" max-w-7xl m-auto min-h-screen px-5">
         <slot />
     </main>
-    <footer class="bg-persoBlue rounded-t-md pt-9 pb-2 ">
+    <footer class="bg-persoMainColor rounded-t-md pt-9 pb-2 ">
         <!-- COMPONENT -->
         <Footer client:visible />
     </footer>

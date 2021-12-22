@@ -4,7 +4,7 @@ export default {
   // dist: './dist',       // When running `astro build`, path to final static output
   // public: './public',   // A folder of static files Astro will copy to the root. Useful for favicons, images, and other files that don’t need processing.
   buildOptions: {
-    site: 'http://sarahleroy.fr',           // Your public domain, e.g.: https://my-site.dev/. Used to generate sitemaps and canonical URLs.
+    site: 'http://sitename.fr',           // Your public domain, e.g.: https://my-site.dev/. Used to generate sitemaps and canonical URLs.
     sitemap: true,         // Generate sitemap (set to "false" to disable)
   },
   devOptions: {
@@ -15,5 +15,6 @@ export default {
   },
   renderers: [
     "@astrojs/renderer-vue",
+    // "@astrojs/renderer-xxx",   // for add a renderer add name of renderer and check documentation : https://docs.astro.build/reference/renderer-reference/
   ],
 };
