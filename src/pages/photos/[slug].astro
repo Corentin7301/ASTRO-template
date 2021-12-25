@@ -2,15 +2,16 @@
 import menu from '../../datas/menu.json';
 import MainLayout from '../../layouts/MainLayout.astro';
 
-    const {slug} = Astro.request.params;
+const {slug} = Astro.request.params;
 
 import { createRequire } from "node:module";
 const require = createRequire(import.meta.url);
 const datas = require(`../../pagesDatas/${slug}.json`);
 
-
 export async function getStaticPaths() {
-    return menu.map((item) => {
+    let home, slugPages;
+    [home, ...slugPages] = menu;
+    return slugPages.map((item) => {
         return [
             {
                 params: {slug: item.slug}
