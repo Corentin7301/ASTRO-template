@@ -1,4 +1,7 @@
 # Welcome to **Astro template** by Corentin PERROUX
+
+## Demo url
+➡️ https://astrobuild-template.netlify.app 🚀
 ## 🧞 Commands
 
 All commands are run from the root of the project, from a terminal:
